@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "this is landing",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "font-awesome": "^4.7.0",
+    "normalize.scss": "^0.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "github:gulpjs/gulp#4.0",
