@@ -1,10 +1,11 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var spritesmith = require('gulp.spritesmith');
-var rimraf = require('rimraf');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const spritesmith = require('gulp.spritesmith');
+const rimraf = require('rimraf');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Static server
 gulp.task('server', function() {
@@ -28,6 +29,10 @@ gulp.task('templates:compile', function buildHTML() {
 gulp.task('styles:compile', function () {
   return gulp.src('source/styles/main.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
 	.pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/css'));
 });
@@ -70,3 +75,4 @@ gulp.task('default', gulp.series(
 	gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
 	gulp.parallel('watch', 'server')
 ));
+
