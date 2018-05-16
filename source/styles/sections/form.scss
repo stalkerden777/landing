@@ -1,0 +1,25 @@
+    .form-section {
+        padding: 100px 0 110px 0;
+        color: #fff;
+        background-color: #1287bf;
+        .title {
+            margin-bottom: 12px;
+        }
+        .title__header {
+            font-size: 2.25rem;
+        }
+        .title__text {
+            font-size: 1.25rem;
+        }
+    }
+    
+    .form {
+        position: relative;
+        width: 67%;
+        margin: auto;
+        padding: 50px 50px 66px 50px;
+        border-radius: 3px;
+        color: #828282;
+        text-align: center;
+        background-color: #fff;
+    }
