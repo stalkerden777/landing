@@ -19,6 +19,10 @@
             .approach__text {
                 padding: 70px 90px;
             }
+            .approach__step {
+                right: auto;
+                left: -52px;
+            }
         }
     }
     &__image {
@@ -42,7 +46,7 @@
     }
     &__step {
         @include centerer-y();
-        right: -58px;
+        right: -52px;
         width: 103px;
         height: 103px;
         border-radius: 5px;
@@ -51,5 +55,23 @@
         font-size: 1.25rem;
         background-color: #de2b24;
         color: #fff;
+        &:before {
+            content: counter(count);
+            counter-increment: count;
+            display: block;
+            font-family: $ff-steps;
+            font-size: 3rem;
+            line-height: 1;
+            color: #fff;
+        }
+    }
+    &__title {
+        margin-bottom: 6px;
+        font-size: 1.125rem;
+        font-family: $ff-main-bold;
+    }
+    &__description {
+        margin: 0;
+        line-height: 1.5;
     }
 }
