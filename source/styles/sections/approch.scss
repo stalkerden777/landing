@@ -2,7 +2,7 @@
     padding: 86px 0 94px;
     background-color: #f3f3f3;
     .title {
-        @media (max-width: 515px) {
+        @media (max-width: 985px) {
             margin-bottom: 35px;
         }
     }
@@ -16,7 +16,7 @@
         counter-reset: count;
     }
     &__item {
-        margin-bottom: 40px;
+        margin-bottom: 28px;
         border-radius: 5px;
         box-shadow: -1px -1px 10px 1px rgba(214, 214, 214, 1);
         color: #424242;
@@ -30,6 +30,12 @@
             text-align: right;
             @media (max-width: 700px) {
                 display: block;
+            }
+            .approach__text {
+                padding: 70px 90px 55px 90px;
+                @media (max-width: 985px) {
+                    padding: 25px 20px;
+                }
             }
             .approach__step {
                 right: auto;
